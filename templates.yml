@@ -6,5 +6,5 @@ templates:
       description : Similar to the base shell template but without example function in the driver implementation
       repository : https://github.com/QualiSystems/shellfoundry-template-empty-driver
     - name : tosca
-      description : Shell template based on TOSCA standard (experimentary)
+      description : Shell template based on TOSCA standard (experimental)
       repository : https://github.com/QualiSystems/shellfoundry-tosca-template
