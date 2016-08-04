@@ -5,6 +5,7 @@ from shellfoundry.commands.install_command import InstallCommandExecutor
 from shellfoundry.commands.list_command import ListCommandExecutor
 from shellfoundry.commands.new_command import NewCommandExecutor
 from shellfoundry.commands.pack_command import PackCommandExecutor
+from shellfoundry.commands.publish_command import PublishCommandExecutor
 
 
 @click.group()
@@ -54,3 +55,13 @@ def install():
     """
     PackCommandExecutor().pack()
     InstallCommandExecutor().install()
+
+@cli.command()
+def publish():
+    """
+    Publishes shell to ShellRepo
+    :return:
+    """
+    PublishCommandExecutor().publish()
+
+
