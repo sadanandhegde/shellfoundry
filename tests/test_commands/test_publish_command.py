@@ -33,7 +33,7 @@ install:
 
         os.chdir('nut_shell')
 
-        with patch('shellfoundry.commands.publish_command.requests.post') as post_mock:
+        with patch('shellfoundry.commands.publish_command.post') as post_mock:
 
             command_executor = PublishCommandExecutor()
 
