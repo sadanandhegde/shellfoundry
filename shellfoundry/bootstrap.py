@@ -1,12 +1,19 @@
+import os
+
 import click
 import pkg_resources
+from cloudshell.rest.api import PackagingRestApiClient
+from cloudshell.rest.exceptions import ShellNotFoundException
+from requests import post
 
 from shellfoundry.commands.dist_command import DistCommandExecutor
+from shellfoundry.commands.generate_command import GenerateCommandExecutor
 from shellfoundry.commands.install_command import InstallCommandExecutor
 from shellfoundry.commands.list_command import ListCommandExecutor
 from shellfoundry.commands.new_command import NewCommandExecutor
 from shellfoundry.commands.pack_command import PackCommandExecutor
 from shellfoundry.commands.publish_command import PublishCommandExecutor
+from shellfoundry.utilities.shell_package import ShellPackage
 
 
 @click.group()
@@ -75,3 +82,12 @@ def dist():
     """
     PackCommandExecutor().pack()
     DistCommandExecutor().dist()
+
+
+@cli.command()
+def generate():
+    """
+    Generates Python driver data model to be used in driver code
+    """
+    PackCommandExecutor().pack()
+    GenerateCommandExecutor().generate()
