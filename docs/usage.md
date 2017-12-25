@@ -102,7 +102,7 @@ other than those with local configuration file (cloudshell_config.yml).
 For times that a local configuration file is more suitable please use this command from shell's root folder:
 
 ```bash
-$ shellfoundry --local config <key> <value>
+$ shellfoundry config --local <key> <value>
 ```
 
 To remove a key from the configuration simply use:
