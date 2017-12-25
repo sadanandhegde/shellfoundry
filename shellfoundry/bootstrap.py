@@ -47,7 +47,8 @@ def list(default_view):
 @click.argument(u'name')
 @click.option(u'--template', default=u'gen2/resource',
               help="Specify a Shell template. Use 'shellfoundry list' to see the list of available templates. "
-                   "You can use 'local://<folder>' to specify a locally saved template")
+                   "You can use 'local:<folder>' to specify a locally saved template"
+                   "Example: shellfoundry new nutshell --templaate local:c:/shell_templates/my_template")
 @click.option(u'--version', default=None)
 @shellfoundry_version_check(abort_if_major=True)
 def new(name, template, version):
